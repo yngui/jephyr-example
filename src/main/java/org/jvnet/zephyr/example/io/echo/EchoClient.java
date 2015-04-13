@@ -42,6 +42,7 @@ public final class EchoClient {
             buffer.put((byte) i);
             i++;
         }
+        buffer.flip();
 
         try (ByteChannel channel = SocketChannel.open(new InetSocketAddress(host, port))) {
             while (true) {
