@@ -32,6 +32,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <zephyr.version>1.0-SNAPSHOT</zephyr.version>
     </properties>
 
@@ -174,12 +175,12 @@
                     <dependency>
                         <groupId>org.jvnet.zephyr.thread</groupId>
                         <artifactId>thread-api</artifactId>
-                        <version>${project.version}</version>
+                        <version>${zephyr.version}</version>
                     </dependency>
                     <dependency>
                         <groupId>org.jvnet.zephyr.jcl</groupId>
                         <artifactId>jcl-jdk7</artifactId>
-                        <version>${project.version}</version>
+                        <version>${zephyr.version}</version>
                     </dependency>
                 </dependencies>
                 <configuration>
