@@ -135,6 +135,21 @@
                             <newName>org/jvnet/zephyr/jcl/java/util/concurrent/ThreadLocalRandom</newName>
                         </mappingEntry>
                         <mappingEntry>
+                            <oldName>java/util/concurrent/locks/AbstractOwnableSynchronizer</oldName>
+                            <newName>org/jvnet/zephyr/jcl/java/util/concurrent/locks/AbstractOwnableSynchronizer
+                            </newName>
+                        </mappingEntry>
+                        <mappingEntry>
+                            <oldName>java/util/concurrent/locks/AbstractQueuedLongSynchronizer</oldName>
+                            <newName>org/jvnet/zephyr/jcl/java/util/concurrent/locks/AbstractQueuedLongSynchronizer
+                            </newName>
+                        </mappingEntry>
+                        <mappingEntry>
+                            <oldName>java/util/concurrent/locks/AbstractQueuedSynchronizer</oldName>
+                            <newName>org/jvnet/zephyr/jcl/java/util/concurrent/locks/AbstractQueuedSynchronizer
+                            </newName>
+                        </mappingEntry>
+                        <mappingEntry>
                             <oldName>java/util/concurrent/locks/LockSupport</oldName>
                             <newName>org/jvnet/zephyr/jcl/java/util/concurrent/locks/LockSupport</newName>
                         </mappingEntry>
@@ -171,6 +186,10 @@
                 <groupId>org.jvnet.zephyr.maven</groupId>
                 <artifactId>javaflow-maven-plugin</artifactId>
                 <version>${zephyr.version}</version>
+                <configuration>
+                    <classesDirectory>${project.build.directory}/remapping-classes</classesDirectory>
+                    <testClassesDirectory>${project.build.directory}/remapping-test-classes</testClassesDirectory>
+                </configuration>
                 <dependencies>
                     <dependency>
                         <groupId>org.jvnet.zephyr.thread</groupId>
@@ -183,10 +202,6 @@
                         <version>${zephyr.version}</version>
                     </dependency>
                 </dependencies>
-                <configuration>
-                    <classesDirectory>${project.build.directory}/remapping-classes</classesDirectory>
-                    <testClassesDirectory>${project.build.directory}/remapping-test-classes</testClassesDirectory>
-                </configuration>
                 <executions>
                     <execution>
                         <goals>
