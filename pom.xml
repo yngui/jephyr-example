@@ -71,6 +71,54 @@
                             <newName>org/jvnet/zephyr/jcl/java/lang/ThreadLocal</newName>
                         </mappingEntry>
                         <mappingEntry>
+                            <oldName>java/nio/channels/DatagramChannel</oldName>
+                            <newName>org/jvnet/zephyr/jcl/java/nio/channels/DatagramChannel</newName>
+                        </mappingEntry>
+                        <mappingEntry>
+                            <oldName>java/nio/channels/Pipe</oldName>
+                            <newName>org/jvnet/zephyr/jcl/java/nio/channels/Pipe</newName>
+                        </mappingEntry>
+                        <mappingEntry>
+                            <oldName>java/nio/channels/SelectableChannel</oldName>
+                            <newName>org/jvnet/zephyr/jcl/java/nio/channels/SelectableChannel</newName>
+                        </mappingEntry>
+                        <mappingEntry>
+                            <oldName>java/nio/channels/SelectionKey</oldName>
+                            <newName>org/jvnet/zephyr/jcl/java/nio/channels/SelectionKey</newName>
+                        </mappingEntry>
+                        <mappingEntry>
+                            <oldName>java/nio/channels/Selector</oldName>
+                            <newName>org/jvnet/zephyr/jcl/java/nio/channels/Selector</newName>
+                        </mappingEntry>
+                        <mappingEntry>
+                            <oldName>java/nio/channels/ServerSocketChannel</oldName>
+                            <newName>org/jvnet/zephyr/jcl/java/nio/channels/ServerSocketChannel</newName>
+                        </mappingEntry>
+                        <mappingEntry>
+                            <oldName>java/nio/channels/SocketChannel</oldName>
+                            <newName>org/jvnet/zephyr/jcl/java/nio/channels/SocketChannel</newName>
+                        </mappingEntry>
+                        <mappingEntry>
+                            <oldName>java/nio/channels/spi/AbstractInterruptibleChannel</oldName>
+                            <newName>org/jvnet/zephyr/jcl/java/nio/channels/spi/AbstractInterruptibleChannel</newName>
+                        </mappingEntry>
+                        <mappingEntry>
+                            <oldName>java/nio/channels/spi/AbstractSelectableChannel</oldName>
+                            <newName>org/jvnet/zephyr/jcl/java/nio/channels/spi/AbstractSelectableChannel</newName>
+                        </mappingEntry>
+                        <mappingEntry>
+                            <oldName>java/nio/channels/spi/AbstractSelectionKey</oldName>
+                            <newName>org/jvnet/zephyr/jcl/java/nio/channels/spi/AbstractSelectionKey</newName>
+                        </mappingEntry>
+                        <mappingEntry>
+                            <oldName>java/nio/channels/spi/AbstractSelector</oldName>
+                            <newName>org/jvnet/zephyr/jcl/java/nio/channels/spi/AbstractSelector</newName>
+                        </mappingEntry>
+                        <mappingEntry>
+                            <oldName>java/nio/channels/spi/SelectorProvider</oldName>
+                            <newName>org/jvnet/zephyr/jcl/java/nio/channels/spi/SelectorProvider</newName>
+                        </mappingEntry>
+                        <mappingEntry>
                             <oldName>java/util/AbstractCollection</oldName>
                             <newName>org/jvnet/zephyr/jcl/java/util/AbstractCollection</newName>
                         </mappingEntry>
