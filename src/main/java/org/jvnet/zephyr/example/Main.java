@@ -22,35 +22,23 @@
  * THE SOFTWARE.
  */
 
-package org.jvnet.zephyr.example.io.echo;
+package org.jvnet.zephyr.example;
 
-import java.io.IOException;
-import java.net.InetSocketAddress;
-import java.nio.ByteBuffer;
-import java.nio.channels.ByteChannel;
-import java.nio.channels.SocketChannel;
+import java.util.concurrent.locks.LockSupport;
 
-public final class EchoClient {
+public class Main {
 
-    public static void main(String[] args) throws IOException {
-        String host = System.getProperty("host", "127.0.0.1");
-        int port = Integer.parseInt(System.getProperty("port", "8007"));
-
-        ByteBuffer buffer = ByteBuffer.allocate(256);
-        int i = 0;
-        while (buffer.hasRemaining()) {
-            buffer.put((byte) i);
-            i++;
-        }
-        buffer.flip();
-
-        try (ByteChannel channel = SocketChannel.open(new InetSocketAddress(host, port))) {
-            while (true) {
-                channel.write(buffer);
-                buffer.compact();
-                channel.read(buffer);
-                buffer.flip();
-            }
-        }
+    public static void main(String[] args) throws InterruptedException {
+        Thread thread = new Thread(() -> {
+            System.out.println("before park");
+            LockSupport.park();
+            System.out.println("after park");
+        });
+        thread.start();
+        Thread.sleep(1000);
+        System.out.println("before unpark");
+        LockSupport.unpark(thread);
+        System.out.println("after unpark");
+        Thread.sleep(1000);
     }
 }

@@ -40,11 +40,24 @@
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.2</version>
+                <version>3.3</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>net.orfjackal.retrolambda</groupId>
+                <artifactId>retrolambda-maven-plugin</artifactId>
+                <version>2.0.3</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>process-main</goal>
+                            <goal>process-test</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.jvnet.zephyr.maven</groupId>
@@ -55,169 +68,16 @@
                     <testOutputDirectory>${project.build.directory}/remapping-test-classes</testOutputDirectory>
                     <mappingEntries>
                         <mappingEntry>
-                            <oldName>java/lang/Thread$State</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/lang/Thread$State</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/lang/Thread$UncaughtExceptionHandler</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/lang/Thread$UncaughtExceptionHandler</newName>
-                        </mappingEntry>
-                        <mappingEntry>
                             <oldName>java/lang/Thread</oldName>
                             <newName>org/jvnet/zephyr/jcl/java/lang/Thread</newName>
                         </mappingEntry>
                         <mappingEntry>
-                            <oldName>java/lang/ThreadLocal</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/lang/ThreadLocal</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/nio/channels/DatagramChannel</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/nio/channels/DatagramChannel</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/nio/channels/Pipe</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/nio/channels/Pipe</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/nio/channels/SelectableChannel</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/nio/channels/SelectableChannel</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/nio/channels/SelectionKey</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/nio/channels/SelectionKey</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/nio/channels/Selector</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/nio/channels/Selector</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/nio/channels/ServerSocketChannel</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/nio/channels/ServerSocketChannel</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/nio/channels/SocketChannel</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/nio/channels/SocketChannel</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/nio/channels/spi/AbstractInterruptibleChannel</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/nio/channels/spi/AbstractInterruptibleChannel</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/nio/channels/spi/AbstractSelectableChannel</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/nio/channels/spi/AbstractSelectableChannel</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/nio/channels/spi/AbstractSelectionKey</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/nio/channels/spi/AbstractSelectionKey</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/nio/channels/spi/AbstractSelector</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/nio/channels/spi/AbstractSelector</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/nio/channels/spi/SelectorProvider</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/nio/channels/spi/SelectorProvider</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/util/AbstractCollection</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/util/AbstractCollection</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/util/AbstractQueue</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/util/AbstractQueue</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/util/Random</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/util/Random</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/util/concurrent/ArrayBlockingQueue</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/util/concurrent/ArrayBlockingQueue</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/util/concurrent/CountDownLatch</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/util/concurrent/CountDownLatch</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/util/concurrent/CyclicBarrier</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/util/concurrent/CyclicBarrier</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/util/concurrent/DelayQueue</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/util/concurrent/DelayQueue</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/util/concurrent/Exchanger</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/util/concurrent/Exchanger</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/util/concurrent/FutureTask</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/util/concurrent/FutureTask</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/util/concurrent/LinkedBlockingDeque</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/util/concurrent/LinkedBlockingDeque</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/util/concurrent/LinkedBlockingQueue</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/util/concurrent/LinkedBlockingQueue</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/util/concurrent/LinkedTransferQueue</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/util/concurrent/LinkedTransferQueue</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/util/concurrent/PriorityBlockingQueue</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/util/concurrent/PriorityBlockingQueue</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/util/concurrent/Semaphore</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/util/concurrent/Semaphore</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/util/concurrent/SynchronousQueue</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/util/concurrent/SynchronousQueue</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/util/concurrent/ThreadLocalRandom</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/util/concurrent/ThreadLocalRandom</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/util/concurrent/locks/AbstractOwnableSynchronizer</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/util/concurrent/locks/AbstractOwnableSynchronizer
-                            </newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/util/concurrent/locks/AbstractQueuedLongSynchronizer</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/util/concurrent/locks/AbstractQueuedLongSynchronizer
-                            </newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/util/concurrent/locks/AbstractQueuedSynchronizer</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/util/concurrent/locks/AbstractQueuedSynchronizer
-                            </newName>
+                            <oldName>java/lang/System</oldName>
+                            <newName>org/jvnet/zephyr/jcl/java/lang/System</newName>
                         </mappingEntry>
                         <mappingEntry>
                             <oldName>java/util/concurrent/locks/LockSupport</oldName>
                             <newName>org/jvnet/zephyr/jcl/java/util/concurrent/locks/LockSupport</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/util/concurrent/locks/ReentrantLock</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/util/concurrent/locks/ReentrantLock</newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/util/concurrent/locks/ReentrantReadWriteLock$ReadLock</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/util/concurrent/locks/ReentrantReadWriteLock$ReadLock
-                            </newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/util/concurrent/locks/ReentrantReadWriteLock$WriteLock</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/util/concurrent/locks/ReentrantReadWriteLock$WriteLock
-                            </newName>
-                        </mappingEntry>
-                        <mappingEntry>
-                            <oldName>java/util/concurrent/locks/ReentrantReadWriteLock</oldName>
-                            <newName>org/jvnet/zephyr/jcl/java/util/concurrent/locks/ReentrantReadWriteLock</newName>
                         </mappingEntry>
                     </mappingEntries>
                 </configuration>
@@ -246,7 +106,7 @@
                     </dependency>
                     <dependency>
                         <groupId>org.jvnet.zephyr.jcl</groupId>
-                        <artifactId>jcl-jdk7</artifactId>
+                        <artifactId>jcl-jdk8</artifactId>
                         <version>${zephyr.version}</version>
                     </dependency>
                 </dependencies>
@@ -261,7 +121,7 @@
             </plugin>
             <plugin>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>2.5</version>
+                <version>2.6</version>
                 <executions>
                     <execution>
                         <id>javaflow</id>
@@ -272,6 +132,54 @@
                             <classifier>javaflow</classifier>
                             <classesDirectory>${project.build.directory}/javaflow-classes</classesDirectory>
                         </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.4.0</version>
+                <configuration>
+                    <cleanupDaemonThreads>false</cleanupDaemonThreads>
+                    <includeProjectDependencies>false</includeProjectDependencies>
+                    <includePluginDependencies>true</includePluginDependencies>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.jvnet.zephyr</groupId>
+                        <artifactId>zephyr-example</artifactId>
+                        <version>${project.version}</version>
+                        <classifier>javaflow</classifier>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.jvnet.zephyr.continuation</groupId>
+                        <artifactId>continuation-javaflow</artifactId>
+                        <version>${zephyr.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.jvnet.zephyr.thread</groupId>
+                        <artifactId>thread-api</artifactId>
+                        <version>${zephyr.version}</version>
+                        <classifier>javaflow</classifier>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.jvnet.zephyr.thread</groupId>
+                        <artifactId>thread-continuation</artifactId>
+                        <version>${zephyr.version}</version>
+                        <classifier>javaflow</classifier>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.jvnet.zephyr.jcl</groupId>
+                        <artifactId>jcl-jdk8</artifactId>
+                        <version>${zephyr.version}</version>
+                        <classifier>javaflow</classifier>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>
