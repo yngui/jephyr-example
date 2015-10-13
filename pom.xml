@@ -182,9 +182,16 @@
                         <classifier>remapped-easyflow</classifier>
                     </dependency>
                     <dependency>
-                        <groupId>org.jvnet.zephyr.easyflow</groupId>
-                        <artifactId>easyflow-runtime</artifactId>
+                        <groupId>org.jvnet.zephyr.continuation</groupId>
+                        <artifactId>continuation-api</artifactId>
                         <version>${zephyr.version}</version>
+                        <classifier>remapped-easyflow</classifier>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.jvnet.zephyr.continuation</groupId>
+                        <artifactId>continuation-easyflow</artifactId>
+                        <version>${zephyr.version}</version>
+                        <classifier>remapped-easyflow</classifier>
                     </dependency>
                 </dependencies>
                 <executions>
