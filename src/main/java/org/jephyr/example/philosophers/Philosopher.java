@@ -22,11 +22,11 @@
  * THE SOFTWARE.
  */
 
-package org.jvnet.zephyr.example.philosophers;
+package org.jephyr.example.philosophers;
 
-import org.jvnet.zephyr.activeobject.annotation.ActiveObject;
-import org.jvnet.zephyr.activeobject.annotation.Oneway;
-import org.jvnet.zephyr.example.philosophers.Fork.Handle;
+import org.jephyr.activeobject.annotation.ActiveObject;
+import org.jephyr.activeobject.annotation.Oneway;
+import org.jephyr.example.philosophers.Fork.Handle;
 
 import static java.util.Objects.requireNonNull;
 

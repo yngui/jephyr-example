@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  */
 
-package org.jvnet.zephyr.example;
+package org.jephyr.example;
 
 import java.util.concurrent.locks.LockSupport;
 

@@ -22,10 +22,10 @@
  * THE SOFTWARE.
  */
 
-package org.jvnet.zephyr.example.philosophers;
+package org.jephyr.example.philosophers;
 
-import org.jvnet.zephyr.activeobject.annotation.ActiveMethod;
-import org.jvnet.zephyr.activeobject.annotation.ActiveObject;
+import org.jephyr.activeobject.annotation.ActiveMethod;
+import org.jephyr.activeobject.annotation.ActiveObject;
 
 @ActiveObject
 public final class Fork {

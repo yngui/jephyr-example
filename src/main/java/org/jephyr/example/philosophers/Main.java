@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  */
 
-package org.jvnet.zephyr.example.philosophers;
+package org.jephyr.example.philosophers;
 
 public class Main {
 
